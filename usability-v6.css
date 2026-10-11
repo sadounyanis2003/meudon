@@ -52,3 +52,7 @@
 .utility-links button[data-action="about"] i{width:13px;height:13px}
 
 .home-social .text-link{margin-top:12px}
+
+/* Les deux portails de données sont visibles sans les filtres du catalogue général. */
+.directory-data .directory-searchbar,.directory-data .directory-sidebar,.directory-data .directory-results-top label{display:none}
+.directory-data .directory-layout{grid-template-columns:minmax(0,1fr);gap:0}
