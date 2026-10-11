@@ -46,3 +46,7 @@
 .site-footer a{color:inherit}
 .site-footer a:hover{color:#fff}
 .site-footer .footer-bottom{color:#dce4d2}
+
+/* Render the utility arrow as an icon, including on mobile Safari. */
+.utility-links button[data-action="about"]{display:inline-flex;align-items:center;gap:6px}
+.utility-links button[data-action="about"] i{width:13px;height:13px}

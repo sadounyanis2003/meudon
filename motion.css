@@ -38,14 +38,14 @@
 .event-card.reveal{animation:none}
 .event-photo{transition:box-shadow .55s var(--motion-ease),transform .55s var(--motion-ease);isolation:isolate}
 .event-photo img{transition:transform 1s var(--photo-ease);transform:scale(1.015)}
-.event-photo:after{content:'Voir le rendez-vous ↗';position:absolute;bottom:17px;right:17px;color:var(--ink);background:#fff;padding:10px 13px;border-radius:2px;font-size:11px;font-weight:700;opacity:0;transform:translateY(12px);transition:opacity .35s,transform .55s var(--motion-ease);pointer-events:none}
+.event-photo:after{content:'Voir le rendez-vous \2197\FE0E';position:absolute;bottom:17px;right:17px;color:var(--ink);background:#fff;padding:10px 13px;border-radius:2px;font-size:11px;font-weight:700;opacity:0;transform:translateY(12px);transition:opacity .35s,transform .55s var(--motion-ease);pointer-events:none}
 .event-photo:hover,.event-photo:focus-visible{transform:translateY(-5px);box-shadow:0 16px 30px #203c3221}
 .event-photo:hover img,.event-photo:focus-visible img{transform:scale(1.055)}
 .event-photo:hover:after,.event-photo:focus-visible:after{opacity:1;transform:translateY(0)}
 .date-badge{transition:transform .6s var(--motion-ease)}.event-photo:hover .date-badge{transform:translateY(3px)}
 .album-home-grid>a{position:relative;display:block;isolation:isolate}
 .album-home-grid>a>img{clip-path:inset(0 round 3px);transform:perspective(1300px) rotateY(calc(var(--pointer-x,0)*2deg));transition:transform .8s var(--motion-ease),filter .8s,box-shadow .8s var(--motion-ease)}
-.album-home-grid>a:after{content:'Voir l’album ↗';position:absolute;right:19px;top:19px;z-index:2;background:#fff;color:var(--ink);padding:11px 15px;font-size:12px;font-weight:700;border-radius:2px;transform:translateY(8px);opacity:0;transition:opacity .35s,transform .6s var(--motion-ease);pointer-events:none}
+.album-home-grid>a:after{content:'Voir l’album \2197\FE0E';position:absolute;right:19px;top:19px;z-index:2;background:#fff;color:var(--ink);padding:11px 15px;font-size:12px;font-weight:700;border-radius:2px;transform:translateY(8px);opacity:0;transition:opacity .35s,transform .6s var(--motion-ease);pointer-events:none}
 .album-home-grid>a:hover:after,.album-home-grid>a:focus-visible:after{opacity:1;transform:translateY(0)}
 .album-home-grid>a:hover>img{filter:saturate(1.1);transform:perspective(1300px) rotateY(calc(var(--pointer-x,0)*2deg)) translateY(-5px);box-shadow:0 16px 26px #263c321f}
 .album-home-grid>a>div{transition:transform .6s var(--motion-ease)}.album-home-grid>a:hover>div{transform:translateX(5px)}
