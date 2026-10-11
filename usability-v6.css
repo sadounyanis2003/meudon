@@ -1,0 +1,47 @@
+/* Practical pages respond immediately; editorial pages retain their photographic motion. */
+.practical-route .event-card,.practical-route .association-card,.practical-route [data-reveal]{opacity:1;transform:none}
+.practical-route .event-photo:hover,.practical-route .event-photo:hover img{transform:none}
+.v6-context-return{margin:0 0 24px;font-size:12px}
+.breadcrumb{flex-wrap:wrap;line-height:1.7}
+.v6-proximity-entry{display:grid;grid-template-columns:1fr 1fr;gap:24px;padding-top:30px;padding-bottom:30px;border-bottom:1px solid var(--line)}
+.v6-proximity-entry>a{display:flex;align-items:center;gap:18px;padding:14px 0}
+.v6-proximity-entry>a>i:last-child{margin-left:auto}
+.v6-proximity-entry strong,.v6-proximity-entry small{display:block}
+.v6-proximity-entry strong{font-size:16px}.v6-proximity-entry small{font-size:12px;color:var(--muted);margin-top:4px}
+.v6-agenda-search{display:grid;grid-template-columns:1fr 240px;gap:24px;align-items:end;margin:25px 0}
+.v6-agenda-search .page-search{margin:0}.v6-month-label{font-size:12px;font-weight:700;display:grid;gap:8px}
+.v6-month-label input{width:100%;min-height:50px;padding:10px 14px;border:1px solid var(--line);background:white;color:var(--ink);border-radius:3px}
+.v6-agenda-bottom{display:flex;justify-content:space-between;gap:20px;align-items:start}
+.v6-checkbox{display:flex;gap:10px;align-items:center;min-height:44px;font-size:13px;flex-shrink:0}.v6-checkbox input{width:18px;height:18px;accent-color:var(--forest)}
+.v6-active-filters{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;font-size:12px;padding:12px 0;border-top:1px solid var(--line)}
+.v6-active-filters:empty{display:none}.v6-active-filters .text-link{font-size:12px}
+#agenda-count{padding:16px 0 22px;font-size:13px;font-weight:700}.v6-official-agenda{margin-top:35px}
+.v6-event-detail{display:grid;grid-template-columns:1fr 1fr;gap:50px;margin-top:30px;align-items:start}
+.v6-event-detail figure{margin:0;position:sticky;top:130px}.v6-event-detail img{width:100%;aspect-ratio:4/3;object-fit:cover}.v6-event-detail h2{font-size:32px;margin:12px 0 24px}.v6-event-detail .form-note{margin:18px 0}
+.v6-journey-steps{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:35px}
+.v6-journey-steps>a{padding:28px;display:grid;gap:16px}.v6-journey-steps>a+a{border-left:1px solid var(--line)}.v6-journey-steps span{color:var(--muted);font-size:12px}.v6-journey-steps h2{font-size:25px}.v6-journey-steps p{font-size:13px}
+.search-page-form{display:flex;gap:12px;align-items:center;margin-bottom:20px}.search-page-form input{width:100%;min-width:0;flex:1;padding:16px;background:white;border:1px solid var(--line);border-radius:3px}.search-page-form button{min-height:52px;white-space:nowrap}
+.v6-frequent-actions{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-bottom:30px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.v6-frequent-actions a{display:flex;gap:12px;align-items:center;justify-content:space-between;font-size:12px;font-weight:700;padding:20px 0}.v6-frequent-actions i{width:16px}
+.search-type-filters{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0}.search-context-note,.search-match-note{font-size:12px;line-height:1.7;color:var(--muted);margin:12px 0}
+.search-page-results .search-result{border-radius:0;box-shadow:none;border:0;border-bottom:1px solid var(--line);margin:0;padding:26px 0}.search-page-results .search-result:hover{background:#eef2e8}.search-page-results h3{font-size:21px;letter-spacing:-.02em}.search-page-results .result-type{font-size:10px}
+.search-page-results .search-result>div{min-width:0}.search-page-results p{overflow-wrap:anywhere}
+.search-page-results .search-result:focus-visible{outline-offset:0}
+.menu-toggle::after{content:'Menu';font-size:10px;font-weight:700;letter-spacing:0;line-height:1}
+.menu-toggle{flex-direction:column;gap:4px;min-width:48px}
+@media(max-width:760px){
+ .city-hero-copy{padding-top:24px!important;padding-bottom:22px!important}.city-hero h1{font-size:46px!important;line-height:1.06!important;margin-top:20px!important;margin-bottom:20px!important}.city-hero-description{font-size:14px!important;line-height:1.65!important}.city-hero-photo{height:175px!important;min-height:175px!important}.city-search{margin-top:22px!important}.city-hero-shortcuts{margin-top:10px!important}
+ .v6-proximity-entry{grid-template-columns:1fr;gap:0;padding-top:14px;padding-bottom:14px}.v6-proximity-entry>a+a{border-top:1px solid var(--line)}.v6-proximity-entry strong{font-size:14px}
+ .agenda-section .event-grid{gap:0}.agenda-section .event-card{display:grid;grid-template-columns:110px 1fr;gap:16px;padding:20px 0;border-bottom:1px solid #ffffff36}.agenda-section .event-card:last-child{border:0}.agenda-section .event-photo{height:115px!important;min-height:0!important;aspect-ratio:auto}.agenda-section .event-info{padding:0!important;display:flex;flex-direction:column;justify-content:space-between}.agenda-section .event-info h3{font-size:20px!important;margin:8px 0!important}.agenda-section .event-info .eyebrow{font-size:8px;line-height:1.5}.agenda-section .event-info-bottom{gap:4px}.agenda-section .event-info-bottom p{font-size:10px}.agenda-section .date-badge{top:8px;left:8px;min-width:42px;padding:6px;font-size:8px}.agenda-section .date-badge strong{font-size:22px}.agenda-section .event-photo::after{display:none}
+ .section{padding-top:46px!important;padding-bottom:46px!important}.section-header{margin-bottom:24px;gap:18px}.neighborhood-section{gap:28px!important}.neighborhood-preview{min-height:230px!important}.association-home{padding-top:45px!important;padding-bottom:45px!important}.figures-grid{gap:0!important}.city-figure{padding:20px 0!important}.album-home-grid{gap:22px!important}.album-home-grid img{height:175px!important}
+ .v6-agenda-search{grid-template-columns:1fr;gap:16px}.v6-agenda-bottom{display:block}.v6-agenda-bottom .filter-row{margin-bottom:14px}.v6-agenda-periods{gap:8px}.v6-agenda-periods .chip{font-size:11px;padding:10px 12px;min-height:44px}.agenda-selects{gap:12px!important}.v6-active-filters{gap:8px}
+ .v6-event-detail{grid-template-columns:1fr;gap:28px}.v6-event-detail figure{position:static}.v6-event-detail .modal-actions{align-items:stretch}.v6-event-detail .modal-actions>*{width:100%}
+ .v6-journey-steps{grid-template-columns:1fr}.v6-journey-steps>a{padding:24px 0}.v6-journey-steps>a+a{border-left:0;border-top:1px solid var(--line)}
+ .search-page-form{flex-wrap:wrap;padding:0!important;background:none!important;border:0!important}.search-page-form>i{display:none}.search-page-form input{flex-basis:100%;font-size:16px}.search-page-form button{width:100%}.search-type-filters .chip{min-height:44px}.search-page-results .search-result{gap:13px;padding:22px 0}.search-page-results h3{font-size:19px}.v6-frequent-actions{grid-template-columns:1fr 1fr;gap:0 20px}.v6-frequent-actions a{padding:16px 0;line-height:1.5}
+ .breadcrumb{font-size:11px}.page-top{padding-top:30px!important;padding-bottom:28px!important}.page-title-row h1{font-size:36px!important}.page-title-row .lead{font-size:14px!important}.page-content{padding-top:10px!important}
+}
+@media(prefers-reduced-motion:reduce){.v6-proximity-entry a,.search-page-results a{transition:none}}
+
+/* Authorship stays visible on every page without competing with municipal navigation. */
+.footer-bottom>.footer-signature{display:flex;flex-direction:column;gap:5px;line-height:1.6;padding:16px 0;flex-shrink:0}
+.footer-signature strong{font-weight:700}
+@media(max-width:760px){.footer-bottom>.footer-signature{padding:4px 0;max-width:100%;flex-shrink:1}.footer-signature span{white-space:normal}}

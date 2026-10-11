@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#263c32"><meta name="robots" content="noindex,nofollow">
+  <title>Meudon — Proposition de refonte · Yanis Sadoun</title>
+  <meta name="author" content="Yanis Sadoun">
+  <meta name="description" content="Découvrez une nouvelle expérience de Meudon : vos services, vos sorties et votre quartier, simplement. Prototype interactif de refonte.">
+  <link rel="icon" href="assets/logo-meudon-officiel.png" type="image/png">
+  <link rel="preload" href="assets/manrope-regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="refinements.css"><link rel="stylesheet" href="experience.css"><link rel="stylesheet" href="editorial.css?v=6"><link rel="stylesheet" href="motion.css?v=6"><link rel="stylesheet" href="fiches-v6.css"><link rel="stylesheet" href="discovery-v6.css"><link rel="stylesheet" href="usability-v6.css?v=github-1">
+  <script src="network-data.js" defer></script><script src="search-core.js?v=6" defer></script><script src="experience-data.js" defer></script><script src="app.js?v=github-1" defer></script><script src="discovery-v6.js?v=6.1" defer></script><script src="fiches-v6.js?v=6.1" defer></script><script src="search-v6.js" defer></script><script src="usability-v6.js" defer></script><script src="motion.js?v=6" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Aller au contenu</a>
+<div class="prototype-bar"><span>VILLE DE MEUDON</span><div class="utility-links"><a href="#/contact">Contact & horaires</a><button data-action="accessibility">Accessibilité</button><button data-action="about">Prototype <span aria-hidden="true">↗</span></button></div></div>
+<header class="site-header"><div class="reading-progress" aria-hidden="true"><span></span></div>
+  <a href="#/" class="brand municipal-brand" aria-label="Ville de Meudon — accueil"><img src="assets/logo-meudon-officiel.png" width="1536" height="774" alt="Ville de Meudon"></a>
+<nav class="desktop-nav" aria-label="Navigation principale"><button data-action="mega" data-menu="quotidien" aria-controls="mega-panel" aria-expanded="false">Démarches<i data-icon="chevron"></i></button><a href="#/famille" data-menu="famille">Famille</a><button data-action="mega" data-menu="sortir" aria-controls="mega-panel" aria-expanded="false">Sorties<i data-icon="chevron"></i></button><a href="#/associations" data-menu="associations">Associations</a><button data-action="mega" data-menu="quartiers" aria-controls="mega-panel" aria-expanded="false">Mon quartier<i data-icon="chevron"></i></button><button data-action="mega" data-menu="ville" aria-controls="mega-panel" aria-expanded="false">La Ville<i data-icon="chevron"></i></button></nav>
+  <div class="header-actions"><button class="icon-button" data-action="search" aria-label="Rechercher dans tous les services"><i data-icon="search"></i></button><a class="button small primary" href="#/agenda">Agenda <i data-icon="calendar"></i></a><button class="icon-button menu-toggle" data-action="menu" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobile-nav"><i data-icon="menu"></i></button></div>
+  <div id="mega-panel" class="mega-panel" hidden></div>
+</header>
+<div id="nav-backdrop" class="nav-backdrop" hidden></div>
+<div class="mobile-nav" id="mobile-nav" hidden></div>
+<main id="main" tabindex="-1"></main>
+<footer class="site-footer"><div class="footer-directory wrap"><a href="#/services"><span>Démarches et services municipaux</span><span>Tous les services <i data-icon="arrow-right"></i></span></a></div><div class="footer-main wrap"><div class="footer-brand"><a class="brand municipal-brand" href="#/" aria-label="Ville de Meudon — accueil"><img src="assets/logo-meudon-officiel.png" width="1536" height="774" alt="Ville de Meudon"></a><p>Informations et services municipaux</p></div><div><span class="eyebrow">CONTACT ET VIE LOCALE</span><a href="#/contact">Contacter la mairie <i data-icon="arrow-up-right"></i></a><a href="#/quartiers">Mon quartier</a><a href="#/associations">La vie associative</a></div><div><span class="eyebrow">VOTRE VILLE</span><a href="#/decouvrir">Découvrir Meudon</a><a href="#/participer">Projets & participation</a><a href="#/galerie">Meudon en images</a><a href="#/reseaux">Les réseaux de la Ville</a><a href="#/services">Démarches & services</a><a href="#/plan">Plan du site</a></div><div class="footer-contact"><span class="eyebrow">HÔTEL DE VILLE</span><p>6 avenue Le Corbeiller<br>92190 Meudon</p><a href="tel:+33141148000">01 41 14 80 00</a><a href="#/contact">Horaires & accès <i data-icon="arrow-right"></i></a></div></div><div id="footer-socials" class="footer-socials wrap"></div><div class="footer-bottom wrap"><div class="footer-signature"><span>Meudon · Proposition de refonte 2026</span><span>Conception et réalisation : <strong>Yanis Sadoun</strong></span></div><div><button data-action="accessibility">Confort de lecture</button><button data-action="credits">Crédits & sources</button><button data-action="about">À propos de la maquette</button></div><button data-action="top" aria-label="Retour en haut"><i data-icon="arrow-up"></i></button></div></footer>
+
+<dialog id="dialog" aria-labelledby="dialog-title"><div id="dialog-body"></div><button class="dialog-close icon-button" data-action="close" aria-label="Fermer"><i data-icon="x"></i></button></dialog>
+<div id="toast" role="status" aria-live="polite"></div>
+</body></html>

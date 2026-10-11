@@ -1,0 +1,58 @@
+[
+  {
+    "dataset": "equipements-culturels",
+    "source": "https://data.meudon.fr/explore/dataset/equipements-culturels/",
+    "records": 15,
+    "modified": "2020-07-09T11:35:15+00:00",
+    "retrieved": "2026-10-11"
+  },
+  {
+    "dataset": "services-municipaux",
+    "source": "https://data.meudon.fr/explore/dataset/services-municipaux/",
+    "records": 51,
+    "modified": "2020-07-16T13:12:50+00:00",
+    "retrieved": "2026-10-11"
+  },
+  {
+    "dataset": "equipements-sportifs",
+    "source": "https://data.meudon.fr/explore/dataset/equipements-sportifs/",
+    "records": 28,
+    "modified": "2020-07-07T07:38:57+00:00",
+    "retrieved": "2026-10-11"
+  },
+  {
+    "dataset": "annuaire-asso-activite",
+    "source": "https://data.meudon.fr/explore/dataset/annuaire-asso-activite/",
+    "records": 111,
+    "modified": "2026-08-20T14:28:58+00:00",
+    "retrieved": "2026-10-11"
+  },
+  {
+    "dataset": "conseilsdequartiers_30_juin_2021",
+    "source": "https://data.meudon.fr/explore/dataset/conseilsdequartiers_30_juin_2021/",
+    "records": 4,
+    "modified": "2021-09-22T09:50:07+00:00",
+    "retrieved": "2026-10-11"
+  },
+  {
+    "dataset": "limite-de-commune",
+    "source": "https://data.meudon.fr/explore/dataset/limite-de-commune/",
+    "records": 1,
+    "modified": "2025-06-13T11:46:25+00:00",
+    "retrieved": "2026-10-11"
+  },
+  {
+    "dataset": "travaux-a-meudon",
+    "source": "https://data.meudon.fr/explore/dataset/travaux-a-meudon/",
+    "records": 1,
+    "modified": "2026-10-08T10:35:03+00:00",
+    "retrieved": "2026-10-11"
+  },
+  {
+    "page": "École municipale des sports — programme 2026–2027",
+    "source": "https://www.meudon.fr/mes-loisirs/sport/lecole-municipale-des-sports/",
+    "selectedSessions": 24,
+    "retrieved": "2026-10-11",
+    "note": "Âges, jours, heures et lieux repris du tableau municipal ; aucune disponibilité de place annoncée."
+  }
+]

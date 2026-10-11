@@ -1,0 +1,60 @@
+/* Fiches de service lisibles, sans animation sur les actions pratiques. */
+.v6-fiche .service-guide{min-width:0}
+.v6-fiche .service-summary{margin-bottom:30px}
+.v6-fiche .service-summary h2{font-size:clamp(1.3rem,2vw,1.75rem);line-height:1.2}
+.v6-fiche .service-summary .button{white-space:normal;text-align:left;height:auto}
+.v6-fiche-section{padding:25px 0;border-top:1px solid var(--line,#d9ded7)}
+.v6-fiche-section>h2{font-size:clamp(1.35rem,2vw,1.75rem);margin:0 0 16px;line-height:1.25}
+.v6-fiche-section p{max-width:75ch}
+.v6-fiche-section p+p{margin-top:14px}
+.v6-practical-list{margin:14px 0 20px;padding-left:22px;list-style:disc}
+.v6-practical-list li{padding-left:4px;margin:10px 0;line-height:1.65}
+.v6-link-pair{display:flex;flex-wrap:wrap;gap:14px 24px;margin:18px 0}
+.v6-link-pair .text-link{white-space:normal}
+.v6-fiche .step-list h3{font-size:1.06rem;margin:0 0 8px;line-height:1.4}
+.v6-fiche .step-list p{margin:0 0 10px}
+.v6-fiche .step-list li>div{min-width:0;flex:1}
+.v6-fiche .service-aside dd{line-height:1.55;margin:5px 0 20px}
+.v6-fiche .aside-help .text-link{display:flex;margin-top:15px;white-space:normal;line-height:1.4}
+.v6-fiche .aside-help h3:not(:first-child){margin-top:30px}
+.v6-fiche .contact-line{overflow-wrap:anywhere;line-height:1.5}
+.v6-source-footer{margin-top:30px;padding-top:20px;border-top:1px solid var(--line,#d9ded7);font-size:.82rem;color:var(--muted,#58655e)}
+.v6-source-footer p{margin:0 0 10px;line-height:1.5}
+.v6-address{font-style:normal;background:var(--paper,#f5f5ef);border-left:3px solid var(--green,#284c3d);padding:18px 20px;margin:18px 0;font-size:1.07rem;line-height:1.65}
+.v6-address .eyebrow{display:block;margin-bottom:8px;font-size:.69rem}
+.v6-info-note{padding:18px 20px;background:var(--paper,#f5f5ef);border-left:3px solid var(--green,#284c3d);font-size:.9rem}
+.v6-practical-details{margin:12px 0;border:1px solid var(--line,#d9ded7);border-radius:3px;overflow:hidden}
+.v6-practical-details summary{padding:17px 20px;cursor:pointer;font-weight:650;line-height:1.4;background:var(--paper,#f5f5ef)}
+.v6-practical-details summary:focus-visible{outline:3px solid var(--green,#284c3d);outline-offset:-4px}
+.v6-hours-table{width:100%;border-collapse:collapse;font-size:.9rem;line-height:1.55}
+.v6-hours-table td,.v6-hours-table th{text-align:left;vertical-align:top;padding:12px 20px;border-top:1px solid var(--line,#d9ded7)}
+.v6-hours-table th{font-weight:600;width:40%}
+.v6-family-actions{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border:1px solid var(--line,#d9ded7);background:#fff;margin-bottom:45px}
+.v6-family-actions>article{padding:25px 24px;min-width:0}
+.v6-family-actions>article+article{border-left:1px solid var(--line,#d9ded7)}
+.v6-family-actions>article>i{color:var(--green,#284c3d);margin-bottom:24px}
+.v6-family-actions h2,.v6-family-actions h3{font-size:1.12rem;line-height:1.35;margin:0 0 12px;letter-spacing:-.02em}
+.v6-family-actions p{font-size:.9rem;line-height:1.65;margin:0 0 20px;color:var(--muted,#58655e)}
+.v6-family-actions .text-link{font-size:.85rem;display:flex;margin-top:14px;white-space:normal;line-height:1.45;justify-content:space-between}
+.v6-family-inline-links{display:flex;flex-direction:column;gap:0}
+.v6-family-actions-inline{grid-template-columns:repeat(2,minmax(0,1fr));margin:20px 0}
+.v6-family-panel h2{font-size:1.6rem;margin:10px 0 20px}
+.v6-family-panel{margin-bottom:25px}
+.v6-association-activities{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.v6-association-activity{border:1px solid var(--line,#d9ded7);padding:20px;min-width:0}
+.v6-association-activity h3{font-size:1.08rem;line-height:1.4;margin:0 0 10px}
+.v6-association-activity p{font-size:.88rem;line-height:1.55}
+.v6-association-activity dl{margin:16px 0 0}
+.v6-association-activity dl>div{margin-top:10px}
+.v6-association-activity dt{font-size:.69rem;text-transform:uppercase;letter-spacing:.05em;color:var(--muted,#58655e)}
+.v6-association-activity dd{font-size:.85rem;line-height:1.5;margin:4px 0 0}
+.v6-activity-contact{margin-top:20px;padding-top:16px;border-top:1px solid var(--line,#d9ded7)}
+.v6-activity-contact .eyebrow{font-size:.65rem}
+.v6-activity-contact .contact-line{font-size:.82rem;margin-top:10px;gap:8px}
+.v6-association-activity>.text-link{font-size:.81rem;white-space:normal;margin-top:14px}
+.v6-association-address+.v6-association-address{margin-top:25px}
+.family-results>.eyebrow{margin-bottom:20px}
+.high-contrast .v6-family-actions,.high-contrast .v6-address,.high-contrast .v6-practical-details summary,.high-contrast .v6-info-note{background:#fff;color:#111;border-color:#222}
+@media(max-width:1100px){.v6-family-actions{grid-template-columns:repeat(2,minmax(0,1fr))}.v6-family-actions>article:nth-child(3){border-left:0}.v6-family-actions>article:nth-child(n+3){border-top:1px solid var(--line,#d9ded7)}}
+@media(max-width:600px){.v6-family-actions,.v6-family-actions-inline{grid-template-columns:1fr;margin-bottom:30px}.v6-family-actions>article{padding:23px 20px}.v6-family-actions>article+article{border-left:0;border-top:1px solid var(--line,#d9ded7)}.v6-family-actions>article>i{margin-bottom:13px}.v6-family-actions p{margin-bottom:12px}.v6-family-actions .text-link{min-height:34px;align-items:center}.v6-fiche-section{padding:23px 0}.v6-hours-table td,.v6-hours-table th{padding:12px}.v6-practical-details summary{padding:16px 12px}.v6-link-pair{flex-direction:column;align-items:flex-start}.v6-fiche .service-aside{padding:24px 20px}.v6-fiche .button{max-width:100%;white-space:normal}}
+@media(max-width:600px){.v6-association-activities{grid-template-columns:1fr}}

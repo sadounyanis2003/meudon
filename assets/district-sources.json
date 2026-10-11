@@ -1,0 +1,163 @@
+{
+  "checked_at": "2026-10-11",
+  "method": "Official live HTML fetched via https://meudon.fr (normal redirects to www), plus web reader for municipal PDF. Search index alone is stale (~2025) and should not override live HTML.",
+  "councils": {
+    "overview_url": "https://www.meudon.fr/ma-ville/democratie-participative/mon-conseil-de-quartier/",
+    "updated": "2026-08-21",
+    "geographic_districts": 5,
+    "councils_count": 3,
+    "groups": [
+      {
+        "label": "Meudon-la-Forêt",
+        "districts": [
+          "Meudon-la-Forêt"
+        ],
+        "url": "https://www.meudon.fr/ma-ville/democratie-participative/mon-conseil-de-quartier/meudon-la-foret/",
+        "archive_date": "2025-09-23",
+        "archive_url": "https://www.meudon.fr/app/uploads/2025/10/20250923_CR-CQ-MLF9.pdf"
+      },
+      {
+        "label": "Bellevue / Meudon sur Seine",
+        "districts": [
+          "Bellevue",
+          "Meudon-sur-Seine"
+        ],
+        "url": "https://www.meudon.fr/ma-ville/democratie-participative/mon-conseil-de-quartier/bellevue-meudon-sur-seine-2/",
+        "archive_date": "2025-06-16",
+        "archive_url": "https://www.meudon.fr/app/uploads/2025/07/CR-CQ-BMsS-2025-06-16.pdf"
+      },
+      {
+        "label": "Centre / Val-Fleury",
+        "districts": [
+          "Meudon Centre",
+          "Val-Fleury"
+        ],
+        "url": "https://www.meudon.fr/ma-ville/democratie-participative/mon-conseil-de-quartier/meudon-centre-val-fleury/",
+        "archive_date": "2025-11-05",
+        "archive_url": "https://www.meudon.fr/app/uploads/2025/12/251105_CRCQCVF10.pdf"
+      }
+    ],
+    "contact_url": "https://www.meudon.fr/contacter-la-mairie/",
+    "mandate_2027_2028": {
+      "application_deadline": "2026-10-10",
+      "draw": "2026-10-16",
+      "results": "2026-10-20",
+      "integration_seminar": "2026-11-21",
+      "note": "Dates advertised on live overview. Application deadline has passed today; do not show an active apply CTA."
+    }
+  },
+  "featured_archive": {
+    "title": "Conseil de quartier de Meudon-la-Forêt — 23 septembre 2025",
+    "date": "2025-09-23",
+    "url": "https://www.meudon.fr/app/uploads/2025/10/20250923_CR-CQ-MLF9.pdf",
+    "pages": 3,
+    "bytes_label": "412,4 ko",
+    "topics": [
+      "Réouverture et nouveaux services de la médiathèque",
+      "Programmes immobiliers rue de la Pépinière et rue Georges-Millandy",
+      "Règlements des parcs et jardins",
+      "Square de la Sauterelle",
+      "Budget participatif",
+      "Aménagements avenue du Général-de-Gaulle"
+    ],
+    "summary": "La séance a porté sur la médiathèque rénovée, les projets immobiliers, les usages des parcs et les aménagements de l’avenue du Général-de-Gaulle.",
+    "caution": "Archive à date fixe, pas un état actuel des chantiers. Ne pas transformer recommandations du conseil en règlement officiel."
+  },
+  "projects_by_district": [
+    {
+      "district": "Meudon-la-Forêt",
+      "url": "https://www.meudon.fr/ma-ville/les-projets-du-mandat/projet-du-mandat-par-quartier/projets-meudon-la-foret/",
+      "labels": [
+        "Géothermie",
+        "Espaces publics du centre commercial Joli-Mai",
+        "Plan guide des espaces publics"
+      ],
+      "updated": "2026-09-21"
+    },
+    {
+      "district": "Meudon Centre",
+      "url": "https://www.meudon.fr/ma-ville/les-projets-du-mandat/projet-du-mandat-par-quartier/projets-meudon-centre/",
+      "labels": [
+        "Rues de la République et Lavoisier",
+        "Chalais-Meudon"
+      ],
+      "updated": "2026-09-21"
+    },
+    {
+      "district": "Val-Fleury",
+      "url": "https://www.meudon.fr/ma-ville/les-projets-du-mandat/projet-du-mandat-par-quartier/projets-val-fleury/",
+      "labels": [
+        "L’Escale, un nouveau tiers-lieu",
+        "Piscine",
+        "Espace naturel sensible sur la colline Rodin"
+      ],
+      "updated": "2026-08-11"
+    },
+    {
+      "district": "Bellevue",
+      "url": "https://www.meudon.fr/ma-ville/les-projets-du-mandat/projet-du-mandat-par-quartier/projets-bellevue/",
+      "labels": [
+        "Projet CNRS marché Bellevue"
+      ],
+      "updated": "2026-08-11"
+    },
+    {
+      "district": "Meudon-sur-Seine",
+      "url": "https://www.meudon.fr/ma-ville/les-projets-du-mandat/projet-du-mandat-par-quartier/projets-meudon-sur-seine/",
+      "labels": [],
+      "updated": "2026-09-21",
+      "note": "Page officielle existe mais aucun projet détaillé visible dans le HTML ; ne pas promettre une liste fournie."
+    }
+  ],
+  "geothermal": {
+    "title": "Géothermie à Meudon-la-Forêt",
+    "url": "https://www.meudon.fr/projets-de-la-ville/geothermie/",
+    "updated": "2026-09-29",
+    "summary": "Transformation du réseau de chaleur de Meudon-la-Forêt pour utiliser la chaleur du sous-sol. La Ville annonce une mise en service en octobre 2027.",
+    "status_wording": "Projet en cours — calendrier annoncé par la Ville",
+    "news_url": "https://www.meudon.fr/actualite/geothermie-le-chantier-avance/",
+    "april_2026_meeting_pdf": "https://www.meudon.fr/app/uploads/1/2026/04/260407_PREZ_FORAGE.pdf",
+    "caution": "La page comporte des durées de forage légèrement contradictoires (jusqu’en octobre / forage continu jusqu’en septembre). Éviter une annonce temps réel des nuisances. Ancien URL /ma-ville/action-municipale/les-grands-projets-du-territoire/geothermie/ retourne 404."
+  },
+  "equipment": [
+    {
+      "title": "L’Avant Seine",
+      "district": "Meudon-sur-Seine",
+      "url": "https://www.meudon.fr/mes-loisirs/equipements-socio-culturels-2/lavant-seine/",
+      "published": "2026-05-22",
+      "summary": "Activités culturelles et sportives pour tous les âges, accompagnement à la scolarité et services de proximité.",
+      "address": "3 rue du Martin-Pêcheur, 92190 Meudon",
+      "phone": "01 41 14 65 00",
+      "verified": "live full page"
+    },
+    {
+      "title": "Centre Millandy",
+      "district": "Meudon-la-Forêt",
+      "url": "https://www.meudon.fr/mes-loisirs/equipements-socio-culturels-2/centre-millandy/",
+      "verified": "linked live official sitemap; content not read"
+    },
+    {
+      "title": "Médiathèques et espaces numériques",
+      "url": "https://www.meudon.fr/mes-loisirs/culture/mediatheques-et-espaces-numeriques/",
+      "verified": "linked live official sitemap; content not read"
+    },
+    {
+      "title": "Potager du Dauphin",
+      "url": "https://www.meudon.fr/mes-loisirs/culture/potager-dauphin/",
+      "verified": "linked live official sitemap; content not read"
+    }
+  ],
+  "val_fleury_caution": "Ancien Espace Val Fleury documenté dans l’index, mais absent de l’arborescence actuelle. Page projets présente L’Escale, un nouveau tiers-lieu à Val-Fleury. Ne pas reprendre anciens horaires/activités comme actuels.",
+  "gallery": {
+    "official_event_story": "https://www.meudon.fr/actualite/15-juin-ecoquartier-en-fete-et-grand-pique-nique/",
+    "title": "Un écoquartier en fête !",
+    "date": "2025-06-15",
+    "published": "2025-06-04",
+    "updated": "2025-06-16",
+    "summary": "Article rétrospectif avec plusieurs photos et légendes de l’inauguration de la place Simone-Veil.",
+    "verification": "Web indexed official article, not latest live content. Image reuse rights not verified.",
+    "album_index_note": "Ancienne page plan du site indexée inclut Albums, mais le plan courant ne contient plus ce lien. Aucun catalogue d’albums photos actuel vérifié.",
+    "videos_url": "https://www.youtube.com/@VilledeMeudon92",
+    "videos_label": "Visionnez nos albums vidéos (lien actuel de la page d’accueil)"
+  }
+}

@@ -1,0 +1,676 @@
+{
+  "auditedAt": "2026-10-11",
+  "method": "Lecture de l’HTML officiel fourni, recherches web limitées aux sources officielles, requêtes HTTP curl de consultation. Aucun contrôle navigateur. Aucune connexion, soumission ou transaction.",
+  "important": "Les codes de refus des outils (403/418), erreurs de résolution locale et applications demandant JavaScript/cookies ne sont pas des preuves de panne du site pour le public.",
+  "entries": [
+    {
+      "id": "portail-famille",
+      "intitule": "Portail famille",
+      "categorie": "services",
+      "url": "https://meudon.kiosquefamille.fr/kiosque/portail/portail_de_fond.php",
+      "serviceRendu": "Gérer les inscriptions et réservations des enfants et accéder au compte famille.",
+      "source": {
+        "url": "https://www.meudon.fr/",
+        "provenance": "Bloc « Tous nos sites » et accès rapide, lignes 1533 et 1964",
+        "localHtml": "work/meudon-current.html"
+      },
+      "statutObserve": "page_recuperee",
+      "observation": "HTTP 200, page HTML reçue et titre cohérent. Connexion et transactions non testées.",
+      "reponseHttp": "200",
+      "urlFinaleObservee": "https://meudon.kiosquefamille.fr/kiosque/portail/portail_de_fond.php",
+      "titreObserve": "Meudon | Familles Connexion",
+      "preuveTechnique": {
+        "curlExitCode": 0,
+        "error": ""
+      },
+      "recommandation": "Lien externe officiel à ouvrir explicitement ; ne pas prétendre que les transactions ont été testées."
+    },
+    {
+      "id": "mes-demarches",
+      "intitule": "Mes démarches",
+      "categorie": "services",
+      "url": "https://www.meudon.fr/mes-demarches/",
+      "serviceRendu": "Trouver la procédure municipale adaptée : état civil, inscriptions, demandes et rendez-vous.",
+      "source": {
+        "url": "https://www.meudon.fr/",
+        "provenance": "Navigation principale et accès rapides, lignes 90, 1388, 1585",
+        "localHtml": "work/meudon-current.html"
+      },
+      "statutObserve": "acces_automatise_refuse",
+      "observation": "Lecture HTTP automatisée refusée (403 via curl ; 418 via outil web). URL attestée par HTML municipal ou index officiel. Ne pas présenter le site comme indisponible.",
+      "reponseHttp": "403",
+      "urlFinaleObservee": "https://www.meudon.fr/mes-demarches/",
+      "titreObserve": "403 Forbidden",
+      "preuveTechnique": {
+        "curlExitCode": 0,
+        "error": ""
+      },
+      "recommandation": "Lien externe officiel à ouvrir explicitement ; ne pas prétendre que les transactions ont été testées."
+    },
+    {
+      "id": "services",
+      "intitule": "Services en ligne",
+      "categorie": "services",
+      "url": "https://services.meudon.fr/",
+      "serviceRendu": "Accéder au portail des démarches et au suivi des demandes.",
+      "source": {
+        "url": "https://www.meudon.fr/mes-demarches/etat-civil/",
+        "provenance": "Page officielle indexée : saisie du code de suivi sur services.meudon.fr ; mentions légales du portail également indexées",
+        "localHtml": null
+      },
+      "statutObserve": "non_verifiable_depuis_environnement",
+      "observation": "Le nom de domaine n’a pas été résolu par curl dans cet environnement. Cela ne prouve pas une panne générale. URL attestée dans des pages officielles indexées.",
+      "reponseHttp": "000",
+      "urlFinaleObservee": "https://services.meudon.fr/",
+      "titreObserve": "",
+      "preuveTechnique": {
+        "curlExitCode": 6,
+        "error": "curl: (6) Could not resolve host: services.meudon.fr"
+      },
+      "recommandation": "Utiliser l’entrée municipale Mes démarches pour le prototype ; garder ce sous-domaine dans l’annuaire avec vérification à faire avant livraison production."
+    },
+    {
+      "id": "demarches-services",
+      "intitule": "Formulaires de démarches",
+      "categorie": "services",
+      "url": "https://demarches.services.meudon.fr/",
+      "serviceRendu": "Accéder aux formulaires municipaux ; domaine mentionné notamment pour le registre des personnes vulnérables.",
+      "source": {
+        "url": "https://www.meudon.fr/mon-quotidien/solidarites-et-sante/handicap/les-aides-aux-demarches/",
+        "provenance": "Page officielle indexée, rubrique registre nominatif des personnes vulnérables ; adresse sans accent",
+        "localHtml": null
+      },
+      "statutObserve": "non_verifiable_depuis_environnement",
+      "observation": "Le nom de domaine n’a pas été résolu par curl dans cet environnement. Cela ne prouve pas une panne générale. URL attestée dans des pages officielles indexées.",
+      "reponseHttp": "000",
+      "urlFinaleObservee": "https://demarches.services.meudon.fr/",
+      "titreObserve": "",
+      "preuveTechnique": {
+        "curlExitCode": 6,
+        "error": "curl: (6) Could not resolve host: demarches.services.meudon.fr"
+      },
+      "recommandation": "Utiliser l’entrée municipale Mes démarches pour le prototype ; garder ce sous-domaine dans l’annuaire avec vérification à faire avant livraison production."
+    },
+    {
+      "id": "je-participe",
+      "intitule": "Je participe",
+      "categorie": "citoyennete",
+      "url": "https://jeparticipe.meudon.fr/",
+      "serviceRendu": "Proposer des idées, participer aux consultations, budgets participatifs et conseils de quartier.",
+      "source": {
+        "url": "https://www.meudon.fr/",
+        "provenance": "Bloc « Tous nos sites », ligne 2008 ; page cible et meta description récupérées",
+        "localHtml": "work/meudon-current.html"
+      },
+      "statutObserve": "page_recuperee",
+      "observation": "HTTP 200, page HTML reçue et titre cohérent. Connexion et transactions non testées.",
+      "reponseHttp": "200",
+      "urlFinaleObservee": "https://jeparticipe.meudon.fr/",
+      "titreObserve": "Meudon | Je participe",
+      "preuveTechnique": {
+        "curlExitCode": 0,
+        "error": ""
+      },
+      "recommandation": "Lien externe officiel à ouvrir explicitement ; ne pas prétendre que les transactions ont été testées."
+    },
+    {
+      "id": "mediatheques",
+      "intitule": "Médiathèques",
+      "categorie": "culture",
+      "url": "https://media.mairie-meudon.fr/",
+      "serviceRendu": "Consulter le catalogue, les ressources, les animations et son compte lecteur.",
+      "source": {
+        "url": "https://www.meudon.fr/",
+        "provenance": "Bloc « Tous nos sites », ligne 1975",
+        "localHtml": "work/meudon-current.html"
+      },
+      "statutObserve": "page_recuperee",
+      "observation": "HTTP 200, page HTML reçue et titre cohérent. Connexion et transactions non testées.",
+      "reponseHttp": "200",
+      "urlFinaleObservee": "https://media.mairie-meudon.fr/",
+      "titreObserve": "Accueil - Meudon | Médiathèques",
+      "preuveTechnique": {
+        "curlExitCode": 0,
+        "error": ""
+      },
+      "recommandation": "Lien externe officiel à ouvrir explicitement ; ne pas prétendre que les transactions ont été testées."
+    },
+    {
+      "id": "musee",
+      "intitule": "Musée d’art et d’histoire",
+      "categorie": "culture",
+      "url": "https://musee.meudon.fr/",
+      "serviceRendu": "Découvrir les collections, expositions, activités et informations de visite.",
+      "source": {
+        "url": "https://www.meudon.fr/",
+        "provenance": "Navigation Culture, ligne 1142, et bloc « Tous nos sites », ligne 1986",
+        "localHtml": "work/meudon-current.html"
+      },
+      "statutObserve": "acces_automatise_refuse",
+      "observation": "Lecture HTTP automatisée refusée (403 via curl ; 418 via outil web). URL attestée par HTML municipal ou index officiel. Ne pas présenter le site comme indisponible.",
+      "reponseHttp": "403",
+      "urlFinaleObservee": "https://musee.meudon.fr/",
+      "titreObserve": "403 Forbidden",
+      "preuveTechnique": {
+        "curlExitCode": 0,
+        "error": ""
+      },
+      "recommandation": "Lien externe officiel à ouvrir explicitement ; ne pas prétendre que les transactions ont été testées."
+    },
+    {
+      "id": "ludotheque",
+      "intitule": "Ludothèque La Ruche",
+      "categorie": "culture",
+      "url": "https://ludo.mairie-meudon.fr/",
+      "serviceRendu": "Trouver des jeux, consulter le catalogue et les informations de la ludothèque.",
+      "source": {
+        "url": "https://www.meudon.fr/",
+        "provenance": "Bloc « Tous nos sites », ligne 1997",
+        "localHtml": "work/meudon-current.html"
+      },
+      "statutObserve": "page_recuperee",
+      "observation": "HTTP 200, page HTML reçue et titre cohérent. Connexion et transactions non testées.",
+      "reponseHttp": "200",
+      "urlFinaleObservee": "https://ludo.mairie-meudon.fr/ludotheque/accueil-portal.aspx",
+      "titreObserve": "Accueil - Meudon | Ludothèque",
+      "preuveTechnique": {
+        "curlExitCode": 0,
+        "error": ""
+      },
+      "recommandation": "Lien externe officiel à ouvrir explicitement ; ne pas prétendre que les transactions ont été testées."
+    },
+    {
+      "id": "saison-culturelle",
+      "intitule": "Saison culturelle",
+      "categorie": "culture",
+      "url": "https://www.meudon.fr/saisonculturelle/",
+      "serviceRendu": "Explorer les spectacles, séances de cinéma, conférences et expositions.",
+      "source": {
+        "url": "https://www.meudon.fr/",
+        "provenance": "Navigation Culture, ligne 1134 ; page cible présente dans index web officiel",
+        "localHtml": "work/meudon-current.html"
+      },
+      "statutObserve": "acces_automatise_refuse",
+      "observation": "Lecture HTTP automatisée refusée (403 via curl ; 418 via outil web). URL attestée par HTML municipal ou index officiel. Ne pas présenter le site comme indisponible.",
+      "reponseHttp": "403",
+      "urlFinaleObservee": "https://www.meudon.fr/saisonculturelle/",
+      "titreObserve": "403 Forbidden",
+      "preuveTechnique": {
+        "curlExitCode": 0,
+        "error": ""
+      },
+      "recommandation": "Lien externe officiel à ouvrir explicitement ; ne pas prétendre que les transactions ont été testées."
+    },
+    {
+      "id": "billetterie",
+      "intitule": "Billetterie culturelle",
+      "categorie": "culture",
+      "url": "https://billetterie.meudon.fr/",
+      "serviceRendu": "Réserver des spectacles, conférences et séances proposés par les équipements culturels municipaux.",
+      "source": {
+        "url": "https://www.meudon.fr/evenements/presentation-de-la-saison-culturelle-25-26/",
+        "provenance": "Page officielle du 05/06/2025, rubrique réservation ; également de nombreuses pages officielles spectacles",
+        "localHtml": null
+      },
+      "statutObserve": "page_intermediaire_recuperee",
+      "observation": "HTTP 200. Page intermédiaire relative à l’activation des cookies reçue ; réservation non testée.",
+      "reponseHttp": "200",
+      "urlFinaleObservee": "https://billetterie.meudon.fr/",
+      "titreObserve": "",
+      "preuveTechnique": {
+        "curlExitCode": 0,
+        "error": ""
+      },
+      "recommandation": "Lien externe officiel à ouvrir explicitement ; ne pas prétendre que les transactions ont été testées."
+    },
+    {
+      "id": "open-data-meudon",
+      "intitule": "Open data Meudon",
+      "categorie": "donnees",
+      "url": "https://data.meudon.fr/",
+      "serviceRendu": "Consulter, télécharger et réutiliser les données publiques de la ville.",
+      "source": {
+        "url": "https://www.meudon.fr/",
+        "provenance": "Bloc « Tous nos sites », ligne 2019 ; complément https://www.meudon.fr/ma-ville/opendata/",
+        "localHtml": "work/meudon-current.html"
+      },
+      "statutObserve": "page_recuperee",
+      "observation": "HTTP 200, page HTML reçue et titre cohérent. Connexion et transactions non testées.",
+      "reponseHttp": "200",
+      "urlFinaleObservee": "https://data.meudon.fr/pages/accueil/",
+      "titreObserve": "Accueil — data.meudon.fr",
+      "preuveTechnique": {
+        "curlExitCode": 0,
+        "error": ""
+      },
+      "recommandation": "Lien externe officiel à ouvrir explicitement ; ne pas prétendre que les transactions ont été testées."
+    },
+    {
+      "id": "open-data-gpso",
+      "intitule": "Open data Grand Paris Seine Ouest",
+      "categorie": "donnees",
+      "url": "https://data.seineouest.fr/",
+      "serviceRendu": "Explorer les données territoriales, cartes et indicateurs de GPSO.",
+      "source": {
+        "url": "https://www.seineouest.fr/accessibilite-2020",
+        "provenance": "Page officielle GPSO mentionnant data.seineouest.fr ; portail cible récupéré",
+        "localHtml": null
+      },
+      "statutObserve": "page_recuperee",
+      "observation": "HTTP 200, page HTML reçue et titre cohérent. Connexion et transactions non testées.",
+      "reponseHttp": "200",
+      "urlFinaleObservee": "https://data.seineouest.fr/pages/accueil/",
+      "titreObserve": "Accueil — data.seineouest.fr",
+      "preuveTechnique": {
+        "curlExitCode": 0,
+        "error": ""
+      },
+      "recommandation": "Lien externe officiel à ouvrir explicitement ; ne pas prétendre que les transactions ont été testées."
+    },
+    {
+      "id": "urbanisme",
+      "intitule": "Guichet numérique d’urbanisme",
+      "categorie": "services",
+      "url": "https://gnau57.operis.fr/meudon/gnau/#/",
+      "serviceRendu": "Déposer et suivre une demande d’autorisation d’urbanisme.",
+      "source": {
+        "url": "https://www.meudon.fr/",
+        "provenance": "Navigation Urbanisme, ligne 623, et bloc « Tous nos sites », ligne 2041",
+        "localHtml": "work/meudon-current.html"
+      },
+      "statutObserve": "application_repond",
+      "observation": "HTTP 200 et coquille HTML de l’application reçue. Les interactions JavaScript et démarches ne sont pas testées.",
+      "reponseHttp": "200",
+      "urlFinaleObservee": "https://gnau57.operis.fr/meudon/gnau/#/",
+      "titreObserve": "gnau - 3.10.3.2",
+      "preuveTechnique": {
+        "curlExitCode": 0,
+        "error": ""
+      },
+      "recommandation": "Lien externe officiel à ouvrir explicitement ; ne pas prétendre que les transactions ont été testées."
+    },
+    {
+      "id": "meubles-touristiques",
+      "intitule": "Meublés touristiques",
+      "categorie": "services",
+      "url": "https://meudon.admin-touriz.fr/",
+      "serviceRendu": "Effectuer la télédéclaration municipale d’un meublé de tourisme.",
+      "source": {
+        "url": "https://www.meudon.fr/",
+        "provenance": "Bloc « Tous nos sites », ligne 2030 ; redirection vers portail Touriz Meudon observée",
+        "localHtml": "work/meudon-current.html"
+      },
+      "statutObserve": "page_recuperee",
+      "observation": "HTTP 200, page HTML reçue et titre cohérent. Connexion et transactions non testées.",
+      "reponseHttp": "200",
+      "urlFinaleObservee": "https://portail.touriz.fr/_/meudon-teledeclaration",
+      "titreObserve": "Touriz - Formulaire",
+      "preuveTechnique": {
+        "curlExitCode": 0,
+        "error": ""
+      },
+      "recommandation": "Lien externe officiel à ouvrir explicitement ; ne pas prétendre que les transactions ont été testées."
+    },
+    {
+      "id": "acceo",
+      "intitule": "Acceo — accueil accessible",
+      "categorie": "accessibilite",
+      "url": "https://app.acce-o.fr/client/meudon",
+      "serviceRendu": "Contacter les services municipaux avec interprétation ou transcription pour personnes sourdes et malentendantes.",
+      "source": {
+        "url": "https://www.meudon.fr/",
+        "provenance": "Bloc « Tous nos sites », ligne 2052 ; complément page officielle Les aides aux démarches",
+        "localHtml": "work/meudon-current.html"
+      },
+      "statutObserve": "application_repond",
+      "observation": "HTTP 200 et coquille HTML de l’application reçue. Les interactions JavaScript et démarches ne sont pas testées.",
+      "reponseHttp": "200",
+      "urlFinaleObservee": "https://app.acce-o.fr/client/meudon",
+      "titreObserve": "Acceo",
+      "preuveTechnique": {
+        "curlExitCode": 0,
+        "error": ""
+      },
+      "recommandation": "Lien externe officiel à ouvrir explicitement ; ne pas prétendre que les transactions ont été testées."
+    },
+    {
+      "id": "facebook",
+      "intitule": "Facebook — Ville de Meudon",
+      "categorie": "reseaux",
+      "url": "https://fr-fr.facebook.com/villedemeudon",
+      "serviceRendu": "Suivre les informations et publications de la Ville sur Facebook.",
+      "source": {
+        "url": "https://www.meudon.fr/",
+        "provenance": "Liens sociaux officiels de pied de page, ligne 2188",
+        "localHtml": "work/meudon-current.html"
+      },
+      "statutObserve": "reponse_partielle",
+      "observation": "Réponse HTTP 200 annoncée, mais transfert interrompu par une erreur HTTP/2. Le profil est bien référencé par la Ville ; disponibilité finale non vérifiée.",
+      "reponseHttp": "200",
+      "urlFinaleObservee": "https://fr-fr.facebook.com/villedemeudon",
+      "titreObserve": "",
+      "preuveTechnique": {
+        "curlExitCode": 92,
+        "error": "curl: (92) HTTP/2 stream 1 was not closed cleanly: INTERNAL_ERROR (err 2)"
+      },
+      "recommandation": "Lien externe officiel à ouvrir explicitement ; ne pas prétendre que les transactions ont été testées."
+    },
+    {
+      "id": "instagram",
+      "intitule": "Instagram — Ville de Meudon",
+      "categorie": "reseaux",
+      "url": "https://www.instagram.com/villedemeudon/",
+      "serviceRendu": "Découvrir les images et actualités de la Ville sur Instagram.",
+      "source": {
+        "url": "https://www.meudon.fr/",
+        "provenance": "Liens sociaux officiels de pied de page, ligne 2195",
+        "localHtml": "work/meudon-current.html"
+      },
+      "statutObserve": "page_recuperee",
+      "observation": "HTTP 200, page HTML reçue et titre cohérent. Connexion et transactions non testées.",
+      "reponseHttp": "200",
+      "urlFinaleObservee": "https://www.instagram.com/villedemeudon/",
+      "titreObserve": "Ville de Meudon (@villedemeudon) • Instagram photos and videos",
+      "preuveTechnique": {
+        "curlExitCode": 0,
+        "error": ""
+      },
+      "recommandation": "Lien externe officiel à ouvrir explicitement ; ne pas prétendre que les transactions ont été testées."
+    },
+    {
+      "id": "linkedin",
+      "intitule": "LinkedIn — Ville de Meudon",
+      "categorie": "reseaux",
+      "url": "https://fr.linkedin.com/company/ville-de-meudon",
+      "serviceRendu": "Suivre les informations institutionnelles et professionnelles de la Ville.",
+      "source": {
+        "url": "https://www.meudon.fr/",
+        "provenance": "Liens sociaux officiels de pied de page, ligne 2202",
+        "localHtml": "work/meudon-current.html"
+      },
+      "statutObserve": "page_recuperee",
+      "observation": "HTTP 200, page HTML reçue et titre cohérent. Connexion et transactions non testées.",
+      "reponseHttp": "200",
+      "urlFinaleObservee": "https://fr.linkedin.com/company/ville-de-meudon",
+      "titreObserve": "Ville de Meudon | LinkedIn",
+      "preuveTechnique": {
+        "curlExitCode": 0,
+        "error": ""
+      },
+      "recommandation": "Lien externe officiel à ouvrir explicitement ; ne pas prétendre que les transactions ont été testées."
+    },
+    {
+      "id": "x",
+      "intitule": "X — Ville de Meudon",
+      "categorie": "reseaux",
+      "url": "https://twitter.com/VilledeMeudon",
+      "serviceRendu": "Suivre les publications de la Ville sur X.",
+      "source": {
+        "url": "https://www.meudon.fr/",
+        "provenance": "Liens sociaux officiels de pied de page, ligne 2209 ; redirection twitter.com vers x.com observée",
+        "localHtml": "work/meudon-current.html"
+      },
+      "statutObserve": "page_recuperee",
+      "observation": "HTTP 200, page HTML reçue et titre cohérent. Connexion et transactions non testées.",
+      "reponseHttp": "200",
+      "urlFinaleObservee": "https://x.com/VilledeMeudon",
+      "titreObserve": "Ville de Meudon (@VilledeMeudon) / X",
+      "preuveTechnique": {
+        "curlExitCode": 0,
+        "error": ""
+      },
+      "recommandation": "Lien externe officiel à ouvrir explicitement ; ne pas prétendre que les transactions ont été testées."
+    },
+    {
+      "id": "youtube",
+      "intitule": "YouTube — Ville de Meudon",
+      "categorie": "reseaux",
+      "url": "https://www.youtube.com/@VilledeMeudon92",
+      "serviceRendu": "Regarder les vidéos municipales.",
+      "source": {
+        "url": "https://www.meudon.fr/",
+        "provenance": "Liens sociaux officiels de pied de page, ligne 2216 ; album vidéos ligne 1857",
+        "localHtml": "work/meudon-current.html"
+      },
+      "statutObserve": "page_recuperee",
+      "observation": "HTTP 200, page HTML reçue et titre cohérent. Connexion et transactions non testées.",
+      "reponseHttp": "200",
+      "urlFinaleObservee": "https://www.youtube.com/@VilledeMeudon92?cbrd=1&ucbcb=1",
+      "titreObserve": "Ville de Meudon - YouTube",
+      "preuveTechnique": {
+        "curlExitCode": 0,
+        "error": ""
+      },
+      "recommandation": "Lien externe officiel à ouvrir explicitement ; ne pas prétendre que les transactions ont été testées."
+    }
+  ],
+  "chiffres": [
+    {
+      "id": "population",
+      "intitule": "Population municipale",
+      "valeur": 46334,
+      "unite": "habitants",
+      "millesime": 2023,
+      "dateEntreeEnVigueur": "2026-01-01",
+      "datePublication": "2025-12-29",
+      "libelleConseille": "46 334 habitants · INSEE 2023",
+      "source": "https://www.insee.fr/fr/statistiques/8643952?geo=COM-92048",
+      "provenance": "INSEE, tableau POPREF T1, populations de référence au 1er janvier 2023 ; RP2023, géographie au 01/01/2025. Contenu consulté avec outil web.",
+      "note": "Population municipale 46 334 ; population totale 46 959. Ne pas mélanger ces deux notions ni utiliser 47 358 affiché sans millésime dans la page municipale."
+    },
+    {
+      "id": "quartiers",
+      "intitule": "Quartiers",
+      "valeur": 5,
+      "unite": "quartiers",
+      "datePublicationSource": "2025-03-24",
+      "libelleConseille": "5 quartiers, une même ville",
+      "detail": [
+        "Bellevue",
+        "Centre",
+        "Meudon-la-Forêt",
+        "Meudon sur Seine",
+        "Val-Fleury"
+      ],
+      "source": "https://www.meudon.fr/ma-ville/decouvrir-meudon-presentation-de-la-ville/chiffres-cles-et-labels/",
+      "provenance": "Page municipale « Chiffres clés et labels », contenu officiel retrouvé dans l’index web ; lecture directe refusée par outil web."
+    },
+    {
+      "id": "espaces-verts",
+      "intitule": "Espaces verts",
+      "valeur": 50,
+      "unite": "hectares",
+      "datePublicationSource": "2025-03-24",
+      "libelleConseille": "50 ha d’espaces verts",
+      "source": "https://www.meudon.fr/ma-ville/decouvrir-meudon-presentation-de-la-ville/chiffres-cles-et-labels/",
+      "provenance": "Page municipale « Chiffres clés et labels », contenu officiel retrouvé dans l’index web ; lecture directe refusée par outil web.",
+      "note": "Chiffre séparé de la forêt dans la page source. Ne pas le transformer en superficie totale de nature."
+    }
+  ],
+  "chiffresAUtiliserAvecPrudence": [
+    {
+      "sujet": "Superficie forestière",
+      "raison": "La page municipale annonce 550 ha dans la commune et 50 %, le Département annonce 520 ha à Meudon au sein d’un massif de 1100 ha, d’autres sources décrivent 1086 ha pour la forêt domaniale sur plusieurs communes. Éviter un compteur ambigu.",
+      "sources": [
+        "https://www.meudon.fr/ma-ville/decouvrir-meudon-presentation-de-la-ville/chiffres-cles-et-labels/",
+        "https://www.hauts-de-seine.fr/sortir-et-decouvrir/patrimoine-vert/les-grands-espaces-naturels/la-foret-de-meudon"
+      ]
+    }
+  ],
+  "remarques": [
+    "Le sous-domaine démarches officiellement retrouvé est demarches.services.meudon.fr (sans accent). Le libellé accentué du cahier des charges ne doit pas être transformé en lien inventé.",
+    "Le libellé Saison culturelle doit rester sans millésime dans un annuaire permanent : la page indexée est encore titrée 2025-2026.",
+    "Le site officiel utilise twitter.com/VilledeMeudon ; la redirection réelle vers x.com/VilledeMeudon a été observée.",
+    "Le portail touristique observé est un service de télédéclaration de meublés, et non un office de tourisme."
+  ],
+  "implementedLinks": [
+    {
+      "id": "famille",
+      "title": "Inscriptions, cantine & compte famille",
+      "url": "https://meudon.kiosquefamille.fr/kiosque/portail/portail_de_fond.php",
+      "source": "https://www.meudon.fr/",
+      "fallback": false
+    },
+    {
+      "id": "demarches",
+      "title": "Préparer une démarche",
+      "url": "https://www.meudon.fr/mes-demarches/",
+      "source": "https://www.meudon.fr/",
+      "fallback": false
+    },
+    {
+      "id": "services",
+      "title": "Suivre une demande",
+      "url": "https://www.meudon.fr/mes-demarches/",
+      "source": "https://www.meudon.fr/mes-demarches/etat-civil/",
+      "fallback": true
+    },
+    {
+      "id": "formulaires",
+      "title": "Trouver un formulaire",
+      "url": "https://www.meudon.fr/mes-demarches/",
+      "source": "https://www.meudon.fr/mon-quotidien/solidarites-et-sante/handicap/les-aides-aux-demarches/",
+      "fallback": true
+    },
+    {
+      "id": "mediatheques",
+      "title": "Réserver un livre",
+      "url": "https://media.mairie-meudon.fr/",
+      "source": "https://www.meudon.fr/",
+      "fallback": false
+    },
+    {
+      "id": "culture",
+      "title": "Réserver un spectacle",
+      "url": "https://billetterie.meudon.fr/",
+      "source": "https://www.meudon.fr/evenements/presentation-de-la-saison-culturelle-25-26/",
+      "fallback": false
+    },
+    {
+      "id": "saison",
+      "title": "Choisir une sortie culturelle",
+      "url": "https://www.meudon.fr/saisonculturelle/",
+      "source": "https://www.meudon.fr/",
+      "fallback": false
+    },
+    {
+      "id": "musee",
+      "title": "Visiter le musée",
+      "url": "https://musee.meudon.fr/",
+      "source": "https://www.meudon.fr/",
+      "fallback": false
+    },
+    {
+      "id": "ludotheque",
+      "title": "Trouver un jeu",
+      "url": "https://ludo.mairie-meudon.fr/",
+      "source": "https://www.meudon.fr/",
+      "fallback": false
+    },
+    {
+      "id": "participation",
+      "title": "Participer à la vie locale",
+      "url": "https://jeparticipe.meudon.fr/",
+      "source": "https://www.meudon.fr/",
+      "fallback": false
+    },
+    {
+      "id": "data-meudon",
+      "title": "Consulter les données de Meudon",
+      "url": "https://data.meudon.fr/",
+      "source": "https://www.meudon.fr/",
+      "fallback": false
+    },
+    {
+      "id": "data-gpso",
+      "title": "Explorer les données du territoire",
+      "url": "https://data.seineouest.fr/",
+      "source": "https://www.seineouest.fr/accessibilite-2020",
+      "fallback": false
+    },
+    {
+      "id": "urbanisme",
+      "title": "Déposer un dossier d’urbanisme",
+      "url": "https://gnau57.operis.fr/meudon/gnau/#/",
+      "source": "https://www.meudon.fr/",
+      "fallback": false
+    },
+    {
+      "id": "tourisme",
+      "title": "Déclarer un meublé touristique",
+      "url": "https://meudon.admin-touriz.fr/",
+      "source": "https://www.meudon.fr/",
+      "fallback": false
+    },
+    {
+      "id": "acceo",
+      "title": "Contacter la Ville avec Acceo",
+      "url": "https://app.acce-o.fr/client/meudon",
+      "source": "https://www.meudon.fr/",
+      "fallback": false
+    },
+    {
+      "id": "dechets",
+      "title": "Connaître les collectes",
+      "url": "https://www.meudon.fr/mon-quotidien/environnement/dechets/",
+      "source": "https://www.meudon.fr/",
+      "fallback": false
+    },
+    {
+      "id": "signaler",
+      "title": "Signaler une anomalie",
+      "url": "https://www.meudon.fr/mon-quotidien/environnement/dechets/proprete/sonet/",
+      "source": "https://www.meudon.fr/",
+      "fallback": false
+    },
+    {
+      "id": "sports",
+      "title": "Inscrire un enfant au sport",
+      "url": "https://www.meudon.fr/mes-loisirs/sport/lecole-municipale-des-sports/",
+      "source": "https://www.meudon.fr/",
+      "fallback": false
+    },
+    {
+      "id": "associations",
+      "title": "Trouver une association",
+      "url": "https://www.meudon.fr/mes-loisirs/associations/annuaire/",
+      "source": "https://www.meudon.fr/",
+      "fallback": false
+    },
+    {
+      "id": "meudon",
+      "title": "Consulter le site municipal",
+      "url": "https://www.meudon.fr/",
+      "source": "https://www.meudon.fr/",
+      "fallback": false
+    },
+    {
+      "id": "hangar",
+      "title": "Découvrir le Hangar Y",
+      "url": "https://hangar-y.com/",
+      "source": "https://www.meudon.fr/mes-loisirs/culture/hangar-y/",
+      "fallback": false
+    },
+    {
+      "id": "rodin",
+      "title": "Visiter le musée Rodin",
+      "url": "https://www.meudon.fr/mes-loisirs/culture/musee-rodin-de-meudon/",
+      "source": "https://www.meudon.fr/",
+      "fallback": false
+    },
+    {
+      "id": "conservatoire",
+      "title": "Découvrir les enseignements artistiques",
+      "url": "https://www.meudon.fr/mes-loisirs/culture/conservatoire/",
+      "source": "https://www.meudon.fr/",
+      "fallback": false
+    },
+    {
+      "id": "piscine",
+      "title": "Aller à la piscine",
+      "url": "https://www.meudon.fr/mes-loisirs/sport/la-piscine-guy-bey/",
+      "source": "https://www.meudon.fr/",
+      "fallback": false
+    }
+  ]
+}

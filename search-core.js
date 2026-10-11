@@ -1,0 +1,50 @@
+/* Recherche locale : normalisation française, fautes proches et orientation par besoin. */
+(function(root,factory){if(typeof module==='object'&&module.exports)module.exports=factory();else root.MeudonSearch=factory()})(typeof globalThis!=='undefined'?globalThis:this,function(){
+  const clean=v=>String(v||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[’']/g,' ').replace(/[^a-z0-9]+/g,' ').trim();
+  const stop=new Set('les des une mon mes dans pour sur que veux faire est quoi qui avec comment puis peux ville meudon au aux du de le la un en et je ce cette fr com www https http trouver connaitre savoir avoir besoin voudrais souhaite cherche ou quand quel quelle quels quelles me ma son sa ses votre vos prochain prochaine pres chez ans an age partir plus moins faut il elle on doit dois peut ont suis sont se a nous vous y veut veulent souhaite souhaitent pourrais pouvez faudrait aujourd hui demain lundi mardi mercredi jeudi vendredi samedi dimanche matin soir semaine dernier derniere tous tout toutes'.split(' '));
+  const canonical={fils:'enfant',fille:'enfant',filles:'enfant',biblioteque:'mediatheque',biblioteques:'mediatheque',ateliers:'atelier',cours:'atelier',livres:'livre',bibliotheque:'mediatheque',bibliotheques:'mediatheque',mediatheques:'mediatheque',mediateque:'mediatheque',mediateques:'mediatheque',enfants:'enfant',bebes:'bebe',creches:'creche',passeports:'passeport',passseport:'passeport',passport:'passeport',cni:'identite',papiers:'identite',factures:'facture',demarches:'demarche',associations:'association',quartiers:'quartier',evenements:'evenement',activites:'activite',donnees:'data',dechets:'dechet',ordures:'dechet',poubelles:'dechet',poubelle:'dechet',reseaux:'reseau',sociaux:'social',services:'service',spectacles:'spectacle',billets:'billet',inscription:'inscrire',inscriptions:'inscrire',inscris:'inscrire',inscrit:'inscrire',reserver:'reservation',seniors:'senior',logements:'logement',horaires:'horaire',heures:'horaire',heure:'horaire',ouvert:'horaire',ouverte:'horaire',ouverture:'horaire',photos:'photo',photographies:'photo',albums:'album',actualites:'actualite',elus:'elu',rendus:'rendu',comptes:'compte',documents:'document',chantiers:'travaux',chantier:'travaux',demanager:'demenager',demenagement:'demenager',demenage:'demenager',renouvellement:'renouveler',renouveller:'renouveler',menus:'menu',ecoles:'ecole',piscines:'piscine',decheterie:'dechetterie',elections:'election',musees:'musee',transports:'transport',circuler:'circulation',promenade:'balade',mediathe:'mediatheque'};
+  const synonyms={atelier:['cours'],cantine:['restauration','famille'],mediatheque:['livre'],payer:['paiement','facture'],livre:['mediatheque'],dechet:['collecte','proprete'],dechetterie:['dechet','collecte'],spectacle:['billetterie'],billet:['billetterie'],sortir:['agenda','sortie'],week:['agenda','sortie'],weekend:['agenda','sortie'],data:['donnee'],bebe:['creche','petite'],ccas:['solidarite'],insta:['instagram'],inscrire:['inscription'],reservation:['reserver'],foot:['football'],nager:['piscine','natation'],balade:['foret','parc'],renouveler:['renouvellement'],demenager:['arrivant','installation'],sms:['alerte'],bus:['transport']};
+  const words=v=>clean(v).split(' ').filter(Boolean).map(w=>canonical[w]||w);
+  function terms(q){return [...new Set(words(q).filter(w=>w.length>1&&!stop.has(w)&&!/^\d{1,3}$/.test(w)))]}
+  // Restricted edit distance: one typo in medium words, two in longer names.
+  function distance(a,b,limit){if(Math.abs(a.length-b.length)>limit)return limit+1;let prev=Array.from({length:b.length+1},(_,i)=>i),prevprev;for(let i=1;i<=a.length;i++){const row=[i];let min=i;for(let j=1;j<=b.length;j++){row[j]=Math.min(row[j-1]+1,prev[j]+1,prev[j-1]+(a[i-1]===b[j-1]?0:1));if(i>1&&j>1&&a[i-1]===b[j-2]&&a[i-2]===b[j-1])row[j]=Math.min(row[j],prevprev[j-2]+1);min=Math.min(min,row[j])}if(min>limit)return limit+1;prevprev=prev;prev=row}return prev[b.length]}
+  function analyze(query,items=[]){const original=terms(query),vocab=new Set(items.flatMap(i=>words((i.title||'')+' '+(i.keywords||''))));const corrections=[];const tokens=original.map(word=>{if(vocab.has(word)||word.length<5)return word;const limit=word.length>=9?2:1;const matches=[...vocab].filter(v=>v.length>=5&&v[0]===word[0]).map(v=>({word:v,d:distance(word,v,limit)})).filter(v=>v.d<=limit).sort((a,b)=>a.d-b.d||a.word.localeCompare(b.word));if(matches.length&&(!matches[1]||matches[0].d<matches[1].d)){corrections.push({from:word,to:matches[0].word});return matches[0].word}return word});return{query:clean(query),original,tokens:[...new Set(tokens)],corrections}}
+  const topicRules=[
+    {tokens:['passeport','identite'],civic:true,ids:['identite','demarches'],anchor:['passeport','identite']},
+    {tokens:['creche','bebe','nourrisson'],ids:['creche','creche-information'],anchor:['creche','bebe']},
+    {tokens:['mediatheque','livre'],ids:['mediatheques'],anchor:['mediatheque','livre']},
+    {tokens:['piscine','nager','natation'],ids:['piscine'],anchor:['piscine','natation']},
+    {tokens:['dechet','dechetterie','encombrant'],civic:true,ids:['dechets'],anchor:['dechet','dechetterie','collecte']},
+    {tokens:['logement'],ids:['logement-social'],anchor:['logement']},
+    {tokens:['cantine'],ids:['famille'],anchor:['cantine','restauration']},
+    {tokens:['travaux','circulation'],civic:true,ids:['quartier'],anchor:['travaux','circulation','projet']},
+    {tokens:['demenager'],ids:['nouvel-habitant','stationnement','dechets','inscription-scolaire'],anchor:['demenager','arrivant']}
+  ];
+  const domainKey=v=>clean(String(v||'').replace(/^https?:\/\//,'').replace(/^www\./,''));
+  const matchesDomain=(item,query)=>[item.originalUrl||item.domain||'',...(item.aliases||[])].some(domain=>domain&&domainKey(domain)===domainKey(query));
+  const modifiers=new Set(['horaire','renouveler','inscrire','document','piece','tarif','prix','gratuit','disponibilite','reservation','prendre','rendez','vous','demande','demander','preparer','menu','enfant','adulte','atelier','activite','adresse','telephone']);
+  function rank(query,items){const analysis=analyze(query,items),original=analysis.tokens;if(!original.length)return clean(query)?items.filter(item=>matchesDomain(item,query)).map(item=>({...item,score:item.id==='meudon'?110:100,hits:0,missing:[],corrections:[],matchKind:'reference'})).sort((a,b)=>b.score-a.score):[];const q=clean(query);const mapQuery=/\b(carte|plan)\b/.test(q)&&/quartier|meudon|ville/.test(q)&&!/identite/.test(q);const topics=topicRules.filter(r=>r.tokens.some(t=>original.includes(t)));const specific=original.filter(w=>!modifiers.has(w));const hasSpecific=specific.length>0;const socialRequest=/instagram|facebook|youtube|linkedin|twitter|reseau|\bx\b|\binsta\b/.test(q);const councilRequest=original.includes('conseil')||original.includes('rendu');const districtTokens=original.filter(w=>['bellevue','fleury','seine','foret'].includes(w));const hoursRequest=original.includes('horaire');
+    return items.map(item=>{const title=words(item.title),keys=words(String(item.keywords||'').replace(/https?:\/\/\S+/g,'').replace(/\b[\w.-]+\.(?:fr|com|org)(?:\/\S*)?/g,'')),body=words((item.desc||'')+' '+(item.category||'')),all=new Set([...title,...keys,...body]);
+      if(item.kind==='social'&&!socialRequest)return null;
+      if(councilRequest&&districtTokens.length&&!districtTokens.every(t=>all.has(t)))return null;
+      if(hoursRequest&&['document','photo','projet','evenement'].includes(item.searchType)&&!all.has('horaire'))return null;
+      if(hoursRequest&&['association','activite'].includes(item.searchType)&&!original.some(t=>['association','atelier','activite'].includes(t)))return null;
+      if(original.includes('reservation')&&original.includes('livre')&&['association','activite'].includes(item.searchType))return null;
+      const topicMatches=topics.filter(r=>r.ids.includes(item.id)||r.anchor.some(t=>all.has(t)));
+      if(topics.length&&!topicMatches.length&&item.searchType!=='page')return null;
+      if(topics.some(t=>t.civic)&&['association','activite'].includes(item.searchType)&&!original.some(t=>['association','atelier','manuel','activite'].includes(t)))return null;
+      if(mapQuery&&!all.has('quartier'))return null;
+      let hits=0,coreHits=0,score=0;for(const word of original){if(mapQuery&&word==='carte')continue;const alternatives=[word,...(synonyms[word]||[])];let best=0;for(const w of alternatives){const weight=w===word?1:.58;best=Math.max(best,(title.includes(w)?12:keys.includes(w)?7:body.includes(w)?2:0)*weight)}if(best){hits++;if(!modifiers.has(word))coreHits++;score+=best}}
+      const exactDomain=matchesDomain(item,query);
+      const minimum=topics.length?1:Math.max(1,Math.ceil(((hasSpecific?specific.length:original.length)-(mapQuery?1:0))*.55));
+      if(!exactDomain&&((hasSpecific?coreHits:hits)<minimum||score<4))return null;
+      if(topics.length&&!topicMatches.length)return null;
+      const directTopic=topicMatches.some(r=>r.ids.includes(item.id));if(directTopic)score+=25;if(item.id==='seniors'&&original.includes('senior'))score+=14;if(item.id==='nouvel-habitant'&&original.includes('demenager'))score+=30;
+      if(clean(item.title).includes(q))score+=18;const titleTerms=terms(item.title);if(original.length===titleTerms.length&&original.every(t=>titleTerms.includes(t)))score+=35;if(exactDomain)score+=100;if(mapQuery&&item.id==='quartier')score+=40;
+      if(councilRequest&&(item.searchType==='document'||item.id==='conseil-municipal'))score+=16;
+      if(original.includes('theatre')&&original.includes('atelier')&&item.id==='association-plakka')score+=16;
+      const missing=original.filter(w=>!all.has(w)&&!(synonyms[w]||[]).some(s=>all.has(s)));
+      return{...item,score:score+Number(item.searchPriority||0),hits,missing,corrections:analysis.corrections,matchKind:item.fictional?'example':(missing.length?'orientation':'reference')};
+    }).filter(Boolean).sort((a,b)=>b.score-a.score||a.title.localeCompare(b.title,'fr'));}
+  return {clean,terms,rank,analyze};
+});
