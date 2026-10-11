@@ -19,7 +19,7 @@ function v6SearchIndex(){
     ['decouvrir-page','Découvrir Meudon','Patrimoine, nature et lieux à visiter.','La Ville','compass','#/decouvrir','decouvrir patrimoine nature visite tourisme observatoire foret balade promenade'],
     ['mairie-page','La mairie et la vie municipale','Accéder aux contacts, aux élus et aux décisions de la Ville.','La mairie','building','#/mairie','mairie elu institution conseil municipal budget décision'],
     ['espace-associations-page','L’espace des responsables associatifs','Accompagnement, ressources et prévisualisation d’une proposition d’événement.','Associations','users','#/espace-associations','responsable association subvention aide evenement proposer publier'],
-    ['reseaux-page','Les réseaux sociaux officiels','Retrouver les comptes officiels de la Ville.','Réseaux sociaux','globe','#/reseaux','reseau social instagram facebook youtube linkedin'],
+    ['reseaux-page','Retrouvez-nous sur les réseaux','Les comptes officiels de Meudon : photos, vidéos et actualités.','Réseaux sociaux','globe','#/retrouvez-nous','retrouvez nous suivre ville reseau social instagram facebook youtube linkedin x'],
     ['plan-page','Le plan du site','Retrouver toutes les rubriques du site.','Navigation','map','#/plan','plan site rubrique arborescence'],
     ['autour-page','Autour de moi','Retrouver les lieux et activités de proximité.','Proximité','pin','#/autour-de-moi','carte equipement lieu autour proximite adresse proche quartier'],
     ['nouvel-habitant','S’installer à Meudon','Retrouver les services pour les inscriptions scolaires, le stationnement et les collectes.','Démarches','building','#/nouvel-arrivant','demenager nouvel habitant arrivant installation']
