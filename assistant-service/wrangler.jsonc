@@ -1,0 +1,18 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "meudon-assistant",
+  "main": "worker.mjs",
+  "compatibility_date": "2026-10-11",
+  "workers_dev": true,
+  "preview_urls": false,
+  "send_metrics": false,
+  "observability": { "enabled": false },
+  "vars": {
+    "ENABLED": "true",
+    "ALLOWED_ORIGINS": "https://sadounyanis2003.github.io"
+  },
+  "durable_objects": {
+    "bindings": [{ "name": "BUDGET", "class_name": "BudgetLedger" }]
+  },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["BudgetLedger"] }]
+}
