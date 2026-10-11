@@ -6,9 +6,9 @@
     "search-core.js": "56a578d316cc7b219198ab44843f4de66549a6f84e1ea1a30858499669d3e203",
     "network-data.js": "53d846ca5646fa69d4f056b75704f488df685472208acef18b8f08fc622d7e33",
     "experience-data.js": "8e41ebce029c84df7d031dce275670462d1b04131d13a8fc61ee78ef4883bc76",
-    "app.js": "a5c8930bf22d17c46c17afb26547c60097070618a3a636159d5e3399c3239719",
+    "app.js": "d9af647bf6c5255ff8d09c95007c414a2ae94eb96bd8595ca63a7e63d4d097a7",
     "discovery-v6.js": "8d7b5169abbb9fe27cea15da51d06c2d651b7c4db67fbbdf5168e8b6877a785c",
-    "search-v6.js": "16b580e440f35ff6062aa41039cf349188ea0b5effe75b603bcce0d6ad4991f5",
+    "search-v6.js": "cb38c599ddcbd5cbda13b3027cb9a3ea94bb6b0db723d69e01008aee9d9f3bc3",
     "usability-v6.js": "09524688f638dee1dc506b8b8915e8a5c319f3c9ab97eb5e389323dff0c7bcd2"
   },
   "excluded": {
@@ -1463,11 +1463,11 @@
     },
     {
       "id": "assistant-page",
-      "title": "L’assistant de Meudon",
+      "title": "Méo, l’assistant de Meudon",
       "description": "Décrivez votre besoin par écrit ou par dictée pour être orienté vers les bonnes pages.",
       "to": "#/assistant",
       "type": "page",
-      "keywords": "assistant ia intelligence artificielle aide question parler vocal dicter orienter",
+      "keywords": "meo méo assistant ia intelligence artificielle aide question parler vocal dicter orienter",
       "category": "Navigation",
       "kind": "journey"
     },

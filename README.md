@@ -14,7 +14,7 @@ Pour travailler en local : servir ce dossier avec un serveur HTTP, par exemple `
 
 ## Assistant facultatif
 
-L’assistant d’orientation utilise un service séparé pour proposer les bonnes pages du site à partir d’une demande formulée librement. Ses liens sont vérifiés dans le catalogue municipal du prototype. En cas d’indisponibilité, la recherche locale prend le relais.
+Méo, l’assistant d’orientation, s’ouvre depuis la bulle en bas à droite. Il utilise un service séparé pour proposer les bonnes pages du site à partir d’une demande formulée librement. La fenêtre et la page complète partagent le même échange ; l’ouverture de la bulle ne déclenche aucun appel facturable. Ses liens sont vérifiés dans le catalogue municipal du prototype. En cas d’indisponibilité, la recherche locale prend le relais.
 
 Le serveur est un Worker Cloudflare avec un registre budgétaire SQLite persistant. Son plafond est de **10 USD cumulés, sans remise à zéro mensuelle**, dont une provision de 0,05 USD pour les vérifications initiales. La clé reste exclusivement côté serveur. La garde tarifaire expire le 10 novembre 2026 ; la clé a été créée pour 30 jours. L’hébergement prévu utilise Workers Free, sans passage automatique au plan payant.
 
@@ -24,7 +24,7 @@ Voir le [guide d’exploitation de l’assistant](assistant-service/README.md) p
 
 - Recherche locale, annuaire de services, 30 associations, 135 activités et 46 lieux référencés.
 - Les événements de démonstration sont fictifs et clairement signalés.
-- Les formulaires ne transmettent aucune demande ; les démarches réelles renvoient aux sites officiels.
+- Les formulaires de démarches ne transmettent aucune demande à la mairie ; les démarches réelles renvoient aux sites officiels.
 - Les favoris et préférences sont enregistrés uniquement dans le navigateur.
 
 ## Crédits

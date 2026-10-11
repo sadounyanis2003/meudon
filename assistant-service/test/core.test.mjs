@@ -51,6 +51,70 @@ test('a short clarification keeps the preceding resident context', () => {
   assert(candidates.some(item => item.id === 'activity-asso-7'));
 });
 
+test('a broad child inscription opens the family journey without assuming identity papers', () => {
+  for (const message of ['Inscrire mon enfant', 'Je veux inscrire mes enfants', 'Inscrire ma fille de 8 ans']) {
+    const user = input(message);
+    const candidates = candidatesFor(user);
+    assert(candidates.some(item => item.id === 'famille-page'));
+    const schema = apiRequest(user, candidates).text.format.schema.properties;
+    assert.deepEqual(schema.kind.enum, ['results']);
+    assert.deepEqual(schema.question.enum, ['']);
+    assert.deepEqual(schema.ids.items.enum, ['famille-page']);
+    assert.equal(schema.ids.minItems, 1);
+    assert.equal(schema.ids.maxItems, 1);
+  }
+  for (const message of ["Inscrire mon enfant à l'école", 'Inscrire mon enfant en crèche',
+    'Inscrire mon enfant au sport', 'Un passeport pour mon enfant']) {
+    const schema = apiRequest(input(message)).text.format.schema.properties;
+    assert(schema.kind.enum.includes('clarification'), `specific request remains available: ${message}`);
+    assert(!schema.ids.items.enum, `specific service is not forced to the broad family page: ${message}`);
+  }
+});
+
+test('clarification choices follow the resident domain and ignore assistant-created topics', () => {
+  const questions = user => apiRequest(user).text.format.schema.properties.question.enum;
+  const documentQuestion = 'Quel document souhaitez-vous préparer ?';
+  const activityQuestion = 'Quel type d’activité recherchez-vous ?';
+  const associationQuestion = 'Souhaitez-vous trouver une association ou proposer un événement ?';
+  for (const message of ['Trouver une activité', 'Mon lampadaire est cassé', 'Contacter la mairie',
+    'La carte des quartiers', 'Je souhaite inscrire mon enfant à l’école']) {
+    assert(!questions(input(message)).includes(documentQuestion), message);
+  }
+  assert(questions(input('Je dois renouveler mon passeport')).includes(documentQuestion));
+  assert(!questions(input('Je dois renouveler mon passeport')).includes(activityQuestion));
+  assert(questions(input('Je cherche des cours de danse')).includes(activityQuestion));
+  assert(questions(input('Trouver une association')).includes(associationQuestion));
+  assert(!questions(input('Contacter la mairie')).includes(associationQuestion));
+  assert(!questions(validateInput({ message: 'Je voudrais faire une demande', history: [
+    { role: 'assistant', content: 'Quel document souhaitez-vous préparer ?' }
+  ] })).includes(documentQuestion));
+  assert(questions(validateInput({ message: 'Pour mon enfant', history: [
+    { role: 'user', content: 'Je voudrais renouveler un passeport' }
+  ] })).includes(documentQuestion));
+  assert(!questions(validateInput({ message: 'Trouver une association', history: [
+    { role: 'user', content: 'Je voudrais renouveler un passeport' }
+  ] })).includes(documentQuestion));
+});
+
+test('a sports answer after child inscription keeps the activity journey', () => {
+  const user = validateInput({ message: 'Une activité sportive', history: [
+    { role: 'user', content: 'Inscrire mon enfant' },
+    { role: 'assistant', content: 'Quel service recherchez-vous ?' }
+  ] });
+  const candidates = candidatesFor(user);
+  assert(candidates.some(item => item.id === 'sports'));
+  assert(candidates.some(item => item.id === 'activites'));
+  const schema = apiRequest(user, candidates).text.format.schema.properties;
+  assert(schema.kind.enum.includes('clarification'));
+  assert(schema.question.enum.includes('Quel type d’activité recherchez-vous ?'));
+  assert(!schema.question.enum.includes('Quel document souhaitez-vous préparer ?'));
+  const contextualInscription = validateInput({ message: 'Inscrire mon enfant', history: [
+    { role: 'user', content: 'Je cherche une activité de théâtre' }
+  ] });
+  assert(apiRequest(contextualInscription).text.format.schema.properties.kind.enum.includes('clarification'));
+  assert(candidatesFor(contextualInscription).some(item => item.id === 'association-plakka'));
+});
+
 test('fictitious events cannot be recommended, including named examples', () => {
   assert(!CATALOG.some(item => item.type === 'evenement' || item.id.startsWith('event-')));
   const candidates = candidatesFor(input('Le Hangar Y autrement, ce week-end'));
