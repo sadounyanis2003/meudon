@@ -1,7 +1,5 @@
 # Meudon — Proposition de refonte
 
-Conception et réalisation : **Yanis Sadoun**.
-
 Prototype interactif de site municipal, destiné à la présentation des parcours, de la navigation et de l’identité visuelle. Cette maquette ne remplace pas le site officiel de la Ville de Meudon.
 
 ## Consultation
@@ -23,4 +21,4 @@ Pour travailler en local : servir ce dossier avec un serveur HTTP, par exemple `
 
 ## Crédits
 
-La conception du prototype est signée Yanis Sadoun. Les photographies, le logo municipal, les données et la police conservent leurs auteurs et licences respectifs. Consulter « Crédits & sources » sur le site et les fichiers JSON de sources dans `assets/`.
+Les photographies, le logo municipal, les données et la police conservent leurs auteurs et licences respectifs. Consulter « Crédits & sources » sur le site et les fichiers JSON de sources dans `assets/`.

@@ -41,12 +41,7 @@
 }
 @media(prefers-reduced-motion:reduce){.v6-proximity-entry a,.search-page-results a{transition:none}}
 
-/* Authorship stays visible on every page without competing with municipal navigation. */
-.footer-bottom>.footer-signature{display:flex;flex-direction:column;gap:5px;line-height:1.6;padding:16px 0;flex-shrink:0}
-.footer-signature strong{font-weight:700}
-@media(max-width:760px){.footer-bottom>.footer-signature{padding:4px 0;max-width:100%;flex-shrink:1}.footer-signature span{white-space:normal}}
-
-/* Keep links and authorship readable on the dark municipal footer. */
+/* Keep the municipal footer readable on its dark background. */
 .site-footer{color:#f5f6f0}
 .site-footer a{color:inherit}
 .site-footer a:hover{color:#fff}
