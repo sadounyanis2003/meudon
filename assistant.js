@@ -296,6 +296,8 @@
     root?.classList.remove('is-open');
     const panel = document.getElementById('meo-panel');
     if (panel) { panel.hidden = true; panel.innerHTML = ''; }
+    const backdrop = document.getElementById('meo-backdrop');
+    if (backdrop) backdrop.hidden = true;
     const launcher = document.getElementById('meo-launcher');
     launcher?.setAttribute('aria-expanded', 'false');
     launcher?.setAttribute('aria-label', 'Parler à Méo');
