@@ -162,11 +162,11 @@ const municipalNetwork = [
   },
   {
     "id": "data-meudon",
-    "title": "Consulter les données de Meudon",
+    "title": "Cartes et données de Meudon",
     "brand": "Open data Meudon",
     "category": "Données publiques",
     "icon": "grid",
-    "desc": "Explorer, télécharger et réutiliser les données publiques de la Ville.",
+    "desc": "Consultez les cartes et téléchargez les données de la Ville : équipements, services municipaux et lieux culturels.",
     "keywords": "open data donnees publiques budget carte chiffres statistiques population csv https://data.meudon.fr/ Open data Meudon",
     "audience": "Habitants de Meudon",
     "note": "Chaque jeu de données précise ses sources, sa mise à jour et sa licence de réutilisation.",
@@ -178,7 +178,7 @@ const municipalNetwork = [
   },
   {
     "id": "data-gpso",
-    "title": "Explorer les données du territoire",
+    "title": "Cartes et données de Grand Paris Seine Ouest",
     "brand": "Open data GPSO",
     "category": "Données publiques",
     "icon": "map",
